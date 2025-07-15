@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 .py-0 {
   padding: 0px 0;
 }
@@ -6911,12 +6912,71 @@ button {
 }
 
 /*
+google fonts
+*/
+li,
+.btn__log-sing {
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+/*
+header section start
+*/
+.header {
+  padding: 32px 0;
+  background-color: #331811;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .header__log svg {
+  color: #FFFFFF;
+  transition: all 0.3s;
+}
+.header .container .header__log svg:hover {
+  color: #FF7757;
+}
+.header .container .nav__ber ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+.header .container .nav__ber ul li a {
+  color: #FFFFFF;
+}
+.header .container .login__singUp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+.header .container .login__singUp .btn__log-sing {
+  padding: 20px 32px;
+  border-radius: 12px;
+  color: white;
+  transition: all 0.3s;
+}
+.header .container .login__singUp .btn__log-sing:hover {
+  background-color: #FF7757;
+}
+.header .container .login__singUp .singup__btn {
+  background-color: #FF7757;
+}
+
+/*
+header section end
+*/
+/*
 container
 */
 .container {
   width: 100%;
   margin-inline: auto;
-  background-color: #331811;
 }
 
 @media screen and (min-width: 992px) {
