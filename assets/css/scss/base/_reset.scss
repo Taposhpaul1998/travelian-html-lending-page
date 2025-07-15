@@ -1,0 +1,31 @@
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+main,
+body {
+    overflow-x: clip;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

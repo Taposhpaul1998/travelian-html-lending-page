@@ -1,0 +1,28 @@
+/*
+container
+*/
+
+$container-max-widths: (
+    lg:932px,
+    xl:1088px,
+    xxl:1376px,
+    xxxl:1556px,
+);
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    background-color: $secondary-color;
+}
+
+@each $breakpoint, $container-width in $container-max-widths {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if$breakpoint-value {
+        @media screen and (min-width:#{$breakpoint-value}) {
+            .container {
+                max-width: $container-width;
+            }
+        }
+    }
+}

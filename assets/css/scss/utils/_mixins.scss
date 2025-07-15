@@ -1,0 +1,402 @@
+// resposive start 
+@mixin responsive ($breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $breakpoint-value {
+        @media screen and (max-width:#{$breakpoint-value}) {
+            @content
+        }
+    }
+}
+
+;
+
+@mixin responsive-min($breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint );
+
+    @if $breakpoint-value {
+        @media screen and (min-width:#{$breakpoint-value}) {
+            @content
+        }
+    }
+}
+
+;
+// resposive end 
+
+// padding and margin size start
+$size : 0,
+10,
+20,
+30,
+40,
+50,
+60,
+70,
+80,
+90,
+100,
+110,
+120,
+130,
+140;
+
+@each $value in $size {
+    .py-#{$value} {
+        padding: $value + px 0;
+    }
+
+    .my-#{$value} {
+        margin: $value + px 0;
+    }
+
+    .pt-#{$value} {
+        padding-top: $value + px;
+    }
+
+    .pb-#{$value} {
+        padding-bottom: $value + px;
+    }
+
+    .pl-#{$value} {
+        padding-left: $value + px;
+    }
+
+    .pr-#{$value} {
+        padding-right: $value + px;
+    }
+
+    .mt-#{$value} {
+        margin-top: $value + px;
+    }
+
+    .mb-#{$value} {
+        margin-bottom: $value + px;
+    }
+
+    .ml-#{$value} {
+        margin-left: $value + px;
+    }
+
+    .mr-#{$value} {
+        margin-right: $value + px;
+    }
+}
+
+@each $value in $size {
+    @include responsive-min("sm") {
+        .py-sm-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-sm-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-sm-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-sm-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-sm-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-sm-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-sm-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-sm-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-sm-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-sm-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+
+    @include responsive-min("md") {
+        .py-md-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-md-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-md-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-md-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-md-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-md-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-md-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-md-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-md-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-md-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+
+    @include responsive-min("lg") {
+        .py-lg-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-lg-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-lg-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-lg-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-lg-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-lg-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-lg-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-lg-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-lg-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-lg-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+
+    @include responsive-min("xl") {
+        .py-xl-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-xl-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-xl-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-xl-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-xl-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-xl-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-xl-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-xl-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-xl-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-xl-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+
+    @include responsive-min("xxl") {
+        .py-xxl-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-xxl-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-xxl-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-xxl-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-xxl-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-xxl-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-xxl-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-xxl-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-xxl-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-xxl-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+
+    @include responsive-min("xxxl") {
+        .py-xxxl-#{$value} {
+            padding: $value + px 0;
+        }
+
+        .my-xxxl-#{$value} {
+            margin: $value + px 0;
+        }
+
+        .pt-xxxl-#{$value} {
+            padding-top: $value + px;
+        }
+
+        .pb-xxxl-#{$value} {
+            padding-bottom: $value + px;
+        }
+
+        .pl-xxxl-#{$value} {
+            padding-left: $value + px;
+        }
+
+        .pr-xxxl-#{$value} {
+            padding-right: $value + px;
+        }
+
+        .mt-xxxl-#{$value} {
+            margin-top: $value + px;
+        }
+
+        .mb-xxxl-#{$value} {
+            margin-bottom: $value + px;
+        }
+
+        .ml-xxxl-#{$value} {
+            margin-left: $value + px;
+        }
+
+        .mr-xxxl-#{$value} {
+            margin-right: $value + px;
+        }
+    }
+}
+
+;
+
+// padding and margin size end 
+
+// gap size start 
+
+@for $i from 1 through 100 {
+    .gap-#{$i} {
+        gap: $i + px;
+    }
+
+    ;
+
+    @include responsive-min("sm") {
+        .gap-sm-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+
+    @include responsive-min("md") {
+        .gap-md-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+
+    @include responsive-min("lg") {
+        .gap-lg-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+
+    @include responsive-min("xl") {
+        .gap-xl-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+
+    @include responsive-min("xxl") {
+        .gap-xxl-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+
+    @include responsive-min("xxxl") {
+        .gap-xxxl-#{$i} {
+            gap: $i + px;
+        }
+    }
+
+    ;
+}
+
+;

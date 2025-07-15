@@ -1,0 +1,54 @@
+$grid-collams: 12;
+
+/*
+row 
+*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+/*
+BASE col
+*/
+.col {
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 100%;
+    padding-left: .05rem;
+    padding-right: .05rem;
+}
+
+// col width : col-1 to col-12 
+
+@for $i from 1 through $grid-collams {
+    .col-#{$i} {
+        flex: 0 0 #{(100%/$grid-collams)*$i};
+        max-width:#{(100%/$grid-collams)*$i};
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+    }
+}
+
+/*
+resposive col
+*/
+
+@each $breakpoint, $size in $breakpoints {
+    @for $i from 1 through $grid-collams {
+        @media screen and (min-width:$size) {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 #{(100%/$grid-collams)*$i};
+                max-width:#{(100%/$grid-collams)*$i};
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+
+            }
+        }
+    }
+}
+
+;
