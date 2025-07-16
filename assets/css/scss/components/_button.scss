@@ -1,0 +1,41 @@
+/*
+login and sign up button style
+*/
+
+.login__singUp {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+
+    .btn__log-sing {
+        padding: 20px 32px;
+        border-radius: 12px;
+        color: white;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+    .singup__btn {
+        background-color: $primary-color;
+    }
+}
+
+/*
+close btn
+*/
+
+.close__btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: transparent;
+
+    i {
+        font-size: 30px;
+        color: $secondary-color;
+    }
+}
